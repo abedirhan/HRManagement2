@@ -4,26 +4,25 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="15a580d85b0345a781b38e5c633587ba" Name="Diagram1">
-        <EntityTypeShape EntityType="Model.COUNTRy" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.DEPARTMENT" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.EMPLOYEE" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.JOB_HISTORY" Width="1.5" PointX="7.5" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.JOB" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.LOCATION" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.REGION" Width="1.5" PointX="1.5" PointY="10.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.LGDEPARTMENT" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
-        <AssociationConnector Association="Model.COUNTR_REG_FK" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.LOC_C_ID_FK" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.DEPT_LOC_FK" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.DEPT_MGR_FK" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.EMP_DEPT_FK" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.JHIST_DEPT_FK" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.EMP_JOB_FK" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.EMP_MANAGER_FK" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.JHIST_EMP_FK" ManuallyRouted="false" />
-        <AssociationConnector Association="Model.JHIST_JOB_FK" ManuallyRouted="false" />
-        </Diagram>
+      <Diagram DiagramId="6a65079113c3478fbe5e2f3b77df048e" Name="Diagram1">
+        <EntityTypeShape EntityType="HRModel.COUNTRy" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRModel.DEPARTMENT" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRModel.EMPLOYEE" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRModel.JOB_HISTORY" Width="1.5" PointX="7.5" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRModel.JOB" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRModel.LOCATION" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRModel.REGION" Width="1.5" PointX="1.5" PointY="10.375" IsExpanded="true" />
+        <AssociationConnector Association="HRModel.COUNTR_REG_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HRModel.LOC_C_ID_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HRModel.DEPT_LOC_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HRModel.DEPT_MGR_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HRModel.EMP_DEPT_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HRModel.JHIST_DEPT_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HRModel.EMP_JOB_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HRModel.EMP_MANAGER_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HRModel.JHIST_EMP_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="HRModel.JHIST_JOB_FK" ManuallyRouted="false" />
+      </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

@@ -4,18 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="12.1" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'COMP214_F19_ERS_25.BOOKS_DEPARTMENT' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="BOOKS_DEPARTMENT">
-          <Property Name="DEPTNO" Type="number" Precision="2" Scale="0" />
-          <Property Name="DNAME" Type="varchar2" MaxLength="20" />
-        </EntityType>-->
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'COMP214_F19_ERS_25.CONTACTS' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="CONTACTS">
-          <Property Name="NAME" Type="varchar2" MaxLength="40" />
-        </EntityType>-->
+      <Schema Namespace="HRModel.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="12.1" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="COUNTRIES">
           <Key>
             <PropertyRef Name="COUNTRY_ID" />
@@ -49,13 +38,6 @@ warning 6013: The table/view 'COMP214_F19_ERS_25.CONTACTS' does not have a prima
           <Property Name="MANAGER_ID" Type="number" Precision="6" Scale="0" />
           <Property Name="DEPARTMENT_ID" Type="number" Precision="4" Scale="0" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'COMP214_F19_ERS_25.JOB_GRADES' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="JOB_GRADES">
-          <Property Name="GRADE_LEVEL" Type="varchar2" MaxLength="3" />
-          <Property Name="LOWEST_SAL" Type="number" Precision="38" Scale="0" />
-          <Property Name="HIGHEST_SAL" Type="number" Precision="38" Scale="0" />
-        </EntityType>-->
         <EntityType Name="JOB_HISTORY">
           <Key>
             <PropertyRef Name="EMPLOYEE_ID" />
@@ -76,48 +58,6 @@ warning 6013: The table/view 'COMP214_F19_ERS_25.JOB_GRADES' does not have a pri
           <Property Name="MIN_SALARY" Type="number" Precision="6" Scale="0" />
           <Property Name="MAX_SALARY" Type="number" Precision="6" Scale="0" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'COMP214_F19_ERS_25.LGBRAND' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="LGBRAND">
-          <Property Name="BRAND_ID" Type="number" Precision="4" Scale="0" />
-          <Property Name="BRAND_NAME" Type="varchar2" MaxLength="100" />
-          <Property Name="BRAND_TYPE" Type="varchar2" MaxLength="20" />
-        </EntityType>-->
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'COMP214_F19_ERS_25.LGCUSTOMER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'COMP214_F19_ERS_25.LGDEPARTMENT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="LGDEPARTMENT">
-          <Key>
-            <PropertyRef Name="DEPT_NUM" />
-            <PropertyRef Name="DEPT_NAME" />
-          </Key>
-          <Property Name="DEPT_NUM" Type="number" Precision="5" Scale="0" Nullable="false" />
-          <Property Name="DEPT_NAME" Type="varchar2" MaxLength="50" Nullable="false" />
-          <Property Name="DEPT_MAIL_BOX" Type="varchar2" MaxLength="3" />
-          <Property Name="DEPT_PHONE" Type="varchar2" MaxLength="9" />
-          <Property Name="EMP_NUM" Type="number" Precision="6" Scale="0" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'COMP214_F19_ERS_25.LGEMPLOYEE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'COMP214_F19_ERS_25.LGINVOICE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'COMP214_F19_ERS_25.LGLINE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'COMP214_F19_ERS_25.LGPRODUCT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'COMP214_F19_ERS_25.LGSALARY_HISTORY' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="LGSALARY_HISTORY">
-          <Property Name="EMP_NUM" Type="number" Precision="6" Scale="0" />
-          <Property Name="SAL_FROM" Type="date" />
-          <Property Name="SAL_END" Type="date" />
-          <Property Name="SAL_AMOUNT" Type="number" Precision="10" Scale="2" />
-        </EntityType>-->
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'COMP214_F19_ERS_25.LGSUPPLIES' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'COMP214_F19_ERS_25.LGVENDOR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="LOCATIONS">
           <Key>
             <PropertyRef Name="LOCATION_ID" />
@@ -129,18 +69,6 @@ warning 6002: The table/view 'COMP214_F19_ERS_25.LGVENDOR' does not have a prima
           <Property Name="STATE_PROVINCE" Type="varchar2" MaxLength="25" />
           <Property Name="COUNTRY_ID" Type="char" MaxLength="2" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'COMP214_F19_ERS_25.MESSAGES' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="MESSAGES">
-          <Property Name="RESULTS" Type="varchar2" MaxLength="100" />
-        </EntityType>-->
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'COMP214_F19_ERS_25.PROMOTION' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="PROMOTION">
-          <Property Name="GIFT" Type="varchar2" MaxLength="15" />
-          <Property Name="MINRETAIL" Type="number" Precision="5" Scale="2" />
-          <Property Name="MAXRETAIL" Type="number" Precision="5" Scale="2" />
-        </EntityType>-->
         <EntityType Name="REGIONS">
           <Key>
             <PropertyRef Name="REGION_ID" />
@@ -148,32 +76,6 @@ warning 6013: The table/view 'COMP214_F19_ERS_25.PROMOTION' does not have a prim
           <Property Name="REGION_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
           <Property Name="REGION_NAME" Type="varchar2" MaxLength="25" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'COMP214_F19_ERS_25.SUPPLIERS' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="SUPPLIERS">
-          <Property Name="SUP_NAME" Type="varchar2" MaxLength="20" />
-          <Property Name="DESCRIPTION" Type="varchar2" MaxLength="100" />
-        </EntityType>-->
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'COMP214_F19_ERS_25.TESTING' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="TESTING">
-          <Property Name="ID" Type="number" Precision="2" Scale="0" />
-          <Property Name="TVALUE" Type="varchar2" MaxLength="10" />
-          <Property Name="DESCRIP" Type="varchar2" MaxLength="50" />
-        </EntityType>-->
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'COMP214_F19_ERS_25.WAREHOUSES' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="WAREHOUSES">
-          <Property Name="WH_ID" Type="number" Precision="2" Scale="0" />
-          <Property Name="LOCATION" Type="varchar2" MaxLength="12" />
-        </EntityType>-->
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'COMP214_F19_ERS_25.WEBHITS' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="WEBHITS">
-          <Property Name="WPAGE" Type="varchar2" MaxLength="20" />
-          <Property Name="WHDATE" Type="date" />
-          <Property Name="TOTAL" Type="number" Precision="6" Scale="0" />
-        </EntityType>-->
         <Association Name="COUNTR_REG_FK">
           <End Role="REGIONS" Type="Self.REGIONS" Multiplicity="0..1" />
           <End Role="COUNTRIES" Type="Self.COUNTRIES" Multiplicity="*" />
@@ -302,21 +204,7 @@ warning 6013: The table/view 'COMP214_F19_ERS_25.WEBHITS' does not have a primar
           <Parameter Name="P_JOB_ID" Type="varchar2" Mode="In" />
           <Parameter Name="P_SALARY" Type="number" Mode="In" />
         </Function>
-        <Function Name="EDIT_EMP_INFO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="COMP214_F19_ERS_25">
-          <Parameter Name="P_EMPLOYEE_ID" Type="number" Mode="In" />
-          <Parameter Name="P_SALARY" Type="number" Mode="In" />
-          <Parameter Name="P_PHONE" Type="varchar2" Mode="In" />
-          <Parameter Name="P_EMAIL" Type="varchar2" Mode="In" />
-        </Function>
-        <Function Name="GET_JOB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="COMP214_F19_ERS_25" ReturnType="varchar2">
-          <Parameter Name="P_JOB_ID" Type="varchar2" Mode="In" />
-        </Function>
-        <Function Name="NEW_JOB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="COMP214_F19_ERS_25">
-          <Parameter Name="P_JOBID" Type="varchar2" Mode="In" />
-          <Parameter Name="P_TITLE" Type="varchar2" Mode="In" />
-          <Parameter Name="V_MINSAL" Type="number" Mode="In" />
-        </Function>
-        <EntityContainer Name="ModelStoreContainer">
+        <EntityContainer Name="HRModelStoreContainer">
           <EntitySet Name="COUNTRIES" EntityType="Self.COUNTRIES" Schema="COMP214_F19_ERS_25" store:Type="Tables" />
           <EntitySet Name="DEPARTMENTS" EntityType="Self.DEPARTMENTS" Schema="COMP214_F19_ERS_25" store:Type="Tables" />
           <EntitySet Name="EMPLOYEES" EntityType="Self.EMPLOYEES" Schema="COMP214_F19_ERS_25" store:Type="Tables" />
@@ -324,15 +212,6 @@ warning 6013: The table/view 'COMP214_F19_ERS_25.WEBHITS' does not have a primar
           <EntitySet Name="JOBS" EntityType="Self.JOBS" Schema="COMP214_F19_ERS_25" store:Type="Tables" />
           <EntitySet Name="LOCATIONS" EntityType="Self.LOCATIONS" Schema="COMP214_F19_ERS_25" store:Type="Tables" />
           <EntitySet Name="REGIONS" EntityType="Self.REGIONS" Schema="COMP214_F19_ERS_25" store:Type="Tables" />
-          <EntitySet Name="LGDEPARTMENT" EntityType="Self.LGDEPARTMENT" store:Type="Tables" store:Schema="COMP214_F19_ERS_25">
-            <DefiningQuery>SELECT 
-"LGDEPARTMENT"."DEPT_NUM" AS "DEPT_NUM", 
-"LGDEPARTMENT"."DEPT_NAME" AS "DEPT_NAME", 
-"LGDEPARTMENT"."DEPT_MAIL_BOX" AS "DEPT_MAIL_BOX", 
-"LGDEPARTMENT"."DEPT_PHONE" AS "DEPT_PHONE", 
-"LGDEPARTMENT"."EMP_NUM" AS "EMP_NUM"
-FROM "COMP214_F19_ERS_25"."LGDEPARTMENT" "LGDEPARTMENT"</DefiningQuery>
-          </EntitySet>
           <AssociationSet Name="COUNTR_REG_FK" Association="Self.COUNTR_REG_FK">
             <End Role="REGIONS" EntitySet="REGIONS" />
             <End Role="COUNTRIES" EntitySet="COUNTRIES" />
@@ -373,12 +252,12 @@ FROM "COMP214_F19_ERS_25"."LGDEPARTMENT" "LGDEPARTMENT"</DefiningQuery>
             <End Role="COUNTRIES" EntitySet="COUNTRIES" />
             <End Role="LOCATIONS" EntitySet="LOCATIONS" />
           </AssociationSet>
-          </EntityContainer>
+        </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="HRModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="COUNTRy">
           <Key>
             <PropertyRef Name="COUNTRY_ID" />
@@ -469,17 +348,6 @@ FROM "COMP214_F19_ERS_25"."LGDEPARTMENT" "LGDEPARTMENT"</DefiningQuery>
           <Property Name="REGION_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
           <Property Name="REGION_NAME" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="COUNTRIES" Relationship="Self.COUNTR_REG_FK" FromRole="REGIONS" ToRole="COUNTRIES" />
-        </EntityType>
-        <EntityType Name="LGDEPARTMENT">
-          <Key>
-            <PropertyRef Name="DEPT_NUM" />
-            <PropertyRef Name="DEPT_NAME" />
-          </Key>
-          <Property Name="DEPT_NUM" Type="Int16" Nullable="false" />
-          <Property Name="DEPT_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="DEPT_MAIL_BOX" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
-          <Property Name="DEPT_PHONE" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
-          <Property Name="EMP_NUM" Type="Int32" />
         </EntityType>
         <Association Name="COUNTR_REG_FK">
           <End Role="REGIONS" Type="Self.REGION" Multiplicity="0..1" />
@@ -601,7 +469,7 @@ FROM "COMP214_F19_ERS_25"."LGDEPARTMENT" "LGDEPARTMENT"</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="EmployeeEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="COUNTRIES" EntityType="Self.COUNTRy" />
           <EntitySet Name="DEPARTMENTS" EntityType="Self.DEPARTMENT" />
           <EntitySet Name="EMPLOYEES" EntityType="Self.EMPLOYEE" />
@@ -609,7 +477,6 @@ FROM "COMP214_F19_ERS_25"."LGDEPARTMENT" "LGDEPARTMENT"</DefiningQuery>
           <EntitySet Name="JOBS" EntityType="Self.JOB" />
           <EntitySet Name="LOCATIONS" EntityType="Self.LOCATION" />
           <EntitySet Name="REGIONS" EntityType="Self.REGION" />
-          <EntitySet Name="LGDEPARTMENTs" EntityType="Self.LGDEPARTMENT" />
           <AssociationSet Name="COUNTR_REG_FK" Association="Self.COUNTR_REG_FK">
             <End Role="REGIONS" EntitySet="REGIONS" />
             <End Role="COUNTRIES" EntitySet="COUNTRIES" />
@@ -650,15 +517,23 @@ FROM "COMP214_F19_ERS_25"."LGDEPARTMENT" "LGDEPARTMENT"</DefiningQuery>
             <End Role="JOBS" EntitySet="JOBS" />
             <End Role="JOB_HISTORY" EntitySet="JOB_HISTORY" />
           </AssociationSet>
+          <FunctionImport Name="CHANGE_JOB_DESC">
+            <Parameter Name="P_JOB_ID" Mode="In" Type="String" />
+            <Parameter Name="P_JOB_TITLE" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="CHECK_SALARY">
+            <Parameter Name="P_JOB_ID" Mode="In" Type="String" />
+            <Parameter Name="P_SALARY" Mode="In" Type="Decimal" />
+          </FunctionImport>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+        <EntityContainerMapping StorageEntityContainer="HRModelStoreContainer" CdmEntityContainer="EmployeeEntities">
           <EntitySetMapping Name="COUNTRIES">
-            <EntityTypeMapping TypeName="Model.COUNTRy">
+            <EntityTypeMapping TypeName="HRModel.COUNTRy">
               <MappingFragment StoreEntitySet="COUNTRIES">
                 <ScalarProperty Name="COUNTRY_ID" ColumnName="COUNTRY_ID" />
                 <ScalarProperty Name="COUNTRY_NAME" ColumnName="COUNTRY_NAME" />
@@ -667,7 +542,7 @@ FROM "COMP214_F19_ERS_25"."LGDEPARTMENT" "LGDEPARTMENT"</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="DEPARTMENTS">
-            <EntityTypeMapping TypeName="Model.DEPARTMENT">
+            <EntityTypeMapping TypeName="HRModel.DEPARTMENT">
               <MappingFragment StoreEntitySet="DEPARTMENTS">
                 <ScalarProperty Name="DEPARTMENT_ID" ColumnName="DEPARTMENT_ID" />
                 <ScalarProperty Name="DEPARTMENT_NAME" ColumnName="DEPARTMENT_NAME" />
@@ -677,7 +552,7 @@ FROM "COMP214_F19_ERS_25"."LGDEPARTMENT" "LGDEPARTMENT"</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="EMPLOYEES">
-            <EntityTypeMapping TypeName="Model.EMPLOYEE">
+            <EntityTypeMapping TypeName="HRModel.EMPLOYEE">
               <MappingFragment StoreEntitySet="EMPLOYEES">
                 <ScalarProperty Name="EMPLOYEE_ID" ColumnName="EMPLOYEE_ID" />
                 <ScalarProperty Name="FIRST_NAME" ColumnName="FIRST_NAME" />
@@ -694,7 +569,7 @@ FROM "COMP214_F19_ERS_25"."LGDEPARTMENT" "LGDEPARTMENT"</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="JOB_HISTORY">
-            <EntityTypeMapping TypeName="Model.JOB_HISTORY">
+            <EntityTypeMapping TypeName="HRModel.JOB_HISTORY">
               <MappingFragment StoreEntitySet="JOB_HISTORY">
                 <ScalarProperty Name="EMPLOYEE_ID" ColumnName="EMPLOYEE_ID" />
                 <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
@@ -705,7 +580,7 @@ FROM "COMP214_F19_ERS_25"."LGDEPARTMENT" "LGDEPARTMENT"</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="JOBS">
-            <EntityTypeMapping TypeName="Model.JOB">
+            <EntityTypeMapping TypeName="HRModel.JOB">
               <MappingFragment StoreEntitySet="JOBS">
                 <ScalarProperty Name="JOB_ID" ColumnName="JOB_ID" />
                 <ScalarProperty Name="JOB_TITLE" ColumnName="JOB_TITLE" />
@@ -715,7 +590,7 @@ FROM "COMP214_F19_ERS_25"."LGDEPARTMENT" "LGDEPARTMENT"</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LOCATIONS">
-            <EntityTypeMapping TypeName="Model.LOCATION">
+            <EntityTypeMapping TypeName="HRModel.LOCATION">
               <MappingFragment StoreEntitySet="LOCATIONS">
                 <ScalarProperty Name="LOCATION_ID" ColumnName="LOCATION_ID" />
                 <ScalarProperty Name="STREET_ADDRESS" ColumnName="STREET_ADDRESS" />
@@ -727,24 +602,15 @@ FROM "COMP214_F19_ERS_25"."LGDEPARTMENT" "LGDEPARTMENT"</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="REGIONS">
-            <EntityTypeMapping TypeName="Model.REGION">
+            <EntityTypeMapping TypeName="HRModel.REGION">
               <MappingFragment StoreEntitySet="REGIONS">
                 <ScalarProperty Name="REGION_ID" ColumnName="REGION_ID" />
                 <ScalarProperty Name="REGION_NAME" ColumnName="REGION_NAME" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="LGDEPARTMENTs">
-            <EntityTypeMapping TypeName="Model.LGDEPARTMENT">
-              <MappingFragment StoreEntitySet="LGDEPARTMENT">
-                <ScalarProperty Name="DEPT_NUM" ColumnName="DEPT_NUM" />
-                <ScalarProperty Name="DEPT_NAME" ColumnName="DEPT_NAME" />
-                <ScalarProperty Name="DEPT_MAIL_BOX" ColumnName="DEPT_MAIL_BOX" />
-                <ScalarProperty Name="DEPT_PHONE" ColumnName="DEPT_PHONE" />
-                <ScalarProperty Name="EMP_NUM" ColumnName="EMP_NUM" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="CHANGE_JOB_DESC" FunctionName="HRModel.Store.CHANGE_JOB_DESC" />
+          <FunctionImportMapping FunctionImportName="CHECK_SALARY" FunctionName="HRModel.Store.CHECK_SALARY" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

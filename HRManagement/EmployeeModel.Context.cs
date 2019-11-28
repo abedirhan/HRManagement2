@@ -7,31 +7,57 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HRManagement
+using HRManagement;
+using System;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+using System.Data.Objects;
+using System.Data.Objects.DataClasses;
+using System.Linq;
+
+public partial class EmployeeEntities : DbContext
 {
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Infrastructure;
-    
-    public partial class Entities : DbContext
+    public EmployeeEntities()
+        : base("name=EmployeeEntities")
     {
-        public Entities()
-            : base("name=Entities")
-        {
-        }
-    
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            throw new UnintentionalCodeFirstException();
-        }
-    
-        public DbSet<COUNTRy> COUNTRIES { get; set; }
-        public DbSet<DEPARTMENT> DEPARTMENTS { get; set; }
-        public DbSet<EMPLOYEE> EMPLOYEES { get; set; }
-        public DbSet<JOB_HISTORY> JOB_HISTORY { get; set; }
-        public DbSet<JOB> JOBS { get; set; }
-        public DbSet<LOCATION> LOCATIONS { get; set; }
-        public DbSet<REGION> REGIONS { get; set; }
-        public DbSet<LGDEPARTMENT> LGDEPARTMENTs { get; set; }
+    }
+
+    protected override void OnModelCreating(DbModelBuilder modelBuilder)
+    {
+        throw new UnintentionalCodeFirstException();
+    }
+
+    public DbSet<COUNTRy> COUNTRIES { get; set; }
+    public DbSet<DEPARTMENT> DEPARTMENTS { get; set; }
+    public DbSet<EMPLOYEE> EMPLOYEES { get; set; }
+    public DbSet<JOB_HISTORY> JOB_HISTORY { get; set; }
+    public DbSet<JOB> JOBS { get; set; }
+    public DbSet<LOCATION> LOCATIONS { get; set; }
+    public DbSet<REGION> REGIONS { get; set; }
+
+    public virtual int CHANGE_JOB_DESC(string p_JOB_ID, string p_JOB_TITLE)
+    {
+        var p_JOB_IDParameter = p_JOB_ID != null ?
+            new ObjectParameter("P_JOB_ID", p_JOB_ID) :
+            new ObjectParameter("P_JOB_ID", typeof(string));
+
+        var p_JOB_TITLEParameter = p_JOB_TITLE != null ?
+            new ObjectParameter("P_JOB_TITLE", p_JOB_TITLE) :
+            new ObjectParameter("P_JOB_TITLE", typeof(string));
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("CHANGE_JOB_DESC", p_JOB_IDParameter, p_JOB_TITLEParameter);
+    }
+
+    public virtual int CHECK_SALARY(string p_JOB_ID, Nullable<decimal> p_SALARY)
+    {
+        var p_JOB_IDParameter = p_JOB_ID != null ?
+            new ObjectParameter("P_JOB_ID", p_JOB_ID) :
+            new ObjectParameter("P_JOB_ID", typeof(string));
+
+        var p_SALARYParameter = p_SALARY.HasValue ?
+            new ObjectParameter("P_SALARY", p_SALARY) :
+            new ObjectParameter("P_SALARY", typeof(decimal));
+
+        return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("CHECK_SALARY", p_JOB_IDParameter, p_SALARYParameter);
     }
 }
