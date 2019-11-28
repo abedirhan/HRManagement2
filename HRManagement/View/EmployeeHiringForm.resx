@@ -117,20 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="apptech" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\apptech.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="505-5053733_macc-provides-the-expertise-of-a-full-human" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\505-5053733_macc-provides-the-expertise-of-a-full-human.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hr" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hr.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LogoN" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogoN.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="download-human-resources-management-human-resource-png-image-human-resource-png-1000_907" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\download-human-resources-management-human-resource-png-image-human-resource-png-1000_907.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>
